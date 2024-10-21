@@ -1,0 +1,9 @@
+
+//stripe integration dependencies
+npm i @stripe/react-stripe-js @stripe/stripe-js
+
+// sync with db
+npx prisma db push
+
+
+npx prisma generate
