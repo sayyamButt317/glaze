@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
@@ -118,10 +119,13 @@ export function ProductsView() {
                 Products & Inventory
               </h1>
             </div>
-            <Button className="h-10 rounded-full bg-neutral-900 px-5 text-white hover:bg-neutral-800">
+            <Link
+              href="/admin/products/new"
+              className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-neutral-900 px-5 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
+            >
               <Plus className="size-4" data-icon="inline-start" />
               Add Product
-            </Button>
+            </Link>
           </div>
 
           <StatCardGrid>
